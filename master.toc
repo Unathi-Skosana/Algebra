@@ -1,0 +1,4 @@
+\babel@toc {english}{}
+\contentsline {section}{Operations}{1}{section*.2}%
+\contentsline {subsection}{Exercises}{2}{section*.3}%
+\contentsfinish 

@@ -1,0 +1,165 @@
+\documentclass[nohyper,nobib]{tufte-handout}
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{graphics/}} % set of paths to search for images
+\usepackage{amsmath,amsfonts,amsthm, amssymb, physics} % Math packages
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+\usepackage{lipsum}   % filler text
+\usepackage{fancyvrb} % extended verbatim environments
+\fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+\allowdisplaybreaks
+\usepackage{mathpazo}
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{verbatim}
+\usepackage{kantlipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\normalfont \bfseries} % Make all sections centered, the default font and small caps
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{xspace}
+\usepackage{float}
+\usepackage[colorlinks=true, linkcolor=WildStrawberry, urlcolor=WildStrawberry, citecolor=Emerald, linktocpage=true, breaklinks=true]{hyperref}
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{facts}[thm]{Facts}
+\newtheorem{fact}[thm]{Fact}
+\newtheorem{clm}[thm]{Claim}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem{exer}[thm]{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+
+\geometry{
+	left=13mm, % left margin
+	textwidth=130mm, % main text block
+	marginparsep=8mm, % gutter between main text block and margin notes
+	marginparwidth=55mm % width of margin notes
+}
+
+\fontsize{10}{20}\selectfont
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{	
+	\normalfont\normalsize 
+	\huge Notes on Charles Pinter's book of abstract algebra % The assignment title
+}\author{Unathi Skosana} % Your name
+\date{\vspace{-5pt}\normalsize March 31, 2020} % Today's date or a custom date
+
+\begin{document}
+\justifying 
+\maketitle
+
+\begin{abstract}
+\noindent
+These are notes taken while reading Charles Pinter's 'A Book Of Abstract Algebra`
+\end{abstract}
+
+\tableofcontents
+
+\section{Operations}
+
+\begin{quest}
+	What is an \textbf{operation} on a set A?
+\end{quest}
+
+\begin{defns}[Informal definition]
+    An operation is any rule which assigns to each ordered pair of elements of $A$ a unique element in $A$.
+\end{defns}
+
+\begin{defns}[Formal definition]
+	Let $A$ be any set:\newline An operation $*$ on A is a rule which assigns to each ordered pairs $(a,b)$ of elements of A exactly one $a * b$ in A
+    \begin{itemize}
+        \item $a * b$ is defined for \emph{every} ordered pair $(a,b)$ of elements of $A$. \footnote{In $\mathbb{R}$, division does not qualify as operation since it does not satisfy this condition. i.e. the ordered pair $(a, 0)$ has undefined quotient $a / 0$.}
+        \item $a * b$ must be \emph{uniquely} defined. \footnote{If $\diamond$ is defined on $(a, b)$ to be the number whose square is $ab$. In $\mathbb{R}$, $\diamond$ does not qualify as an operation since $2 \diamond 2$  could be either $2$, or $+2$}
+        \item If $a, b \in A$, then $a * b \in A$. \footnote{$A$ is closed under the operation $*$}
+    \end{itemize}
+\end{defns}
+
+\begin{defns}[Superfluous properties]
+
+    \begin{itemize}
+        \item An operation $*$ is said to be \emph{commutative} if it satisfies
+            \begin{align}
+                a * b  = b * a
+            \end{align}
+            for any two elements $a$ and $b$ in $A$.
+        \item An operation $*$ is said to be \emph{associative} if it satisfies 
+            \begin{align}
+                (a * b) * c = a * (b * c)
+            \end{align}
+            for any three elements $a$, $b$ and $c$ in $A$.
+        \item The \emph{identity} element $e$ with respect to the operation $*$ has the property that:
+            \begin{align}
+                e * a  = a \quad\text{ and }\quad a * e = a
+            \end{align}
+            for every element in $a$ in $A$.
+        \item The inverse of any element $a$, denoted by $a^{-1}$ has the property that;
+            \begin{align}
+                a * a^{-1} = e  \quad\text{ and }\quad a^{-1} * a = e
+            \end{align}
+    \end{itemize}
+\end{defns}
+
+\subsection{Exercises}
+\textbf{A}. For each rule, is it an operation, if not, why?
+\begin{enumerate}
+    \item $a * b  = \sqrt{\abs{a b}}$, on the set $\mathbb{Q}$ 
+        \newline
+        No. If $a = b = 1$, then $1 * 1 = \sqrt{2} \not\in \mathbb{Q}$
+    \item $a * b  = a\ln{b}$, on the set $\{ x \in \mathbb{R}: x > 0\} \}$.
+        \newline
+        No. It is not closed under $*$, e.g $0 < b < 1$, then $a * b  = a\ln{b} < 0$
+    \item $a * b$ is a root of the equation, $x^2 = a^2b^2$, on the set $\mathbb{R}$
+        \newline
+        No. The operation isn't uniquely defined. $x^2 = a^2b^2$ has to two roots, namely $+ab$ and $-ab$
+    \item Subtraction, on the set $\mathbb{Z}$. 
+        \newline
+        Yes. 
+    \item Subtraction, on the set $\{ n \in \mathbb{Z}: n \geq 0 \}$.
+        \newline
+        No. e.g. $b = a + 1$ then $a * b = -1$ which is not in the set.
+    \item $a * b = |a - b|$, on the set $\{ n \in \mathbb{Z}: n \geq 0\}$
+        \newline
+        Yes. (distance metric)
+\end{enumerate}
+
+\end{document}
