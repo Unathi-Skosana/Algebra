@@ -7,10 +7,10 @@ main: build/main.pdf
 exercises: build/main.pdf
 
 build/main.pdf: main.tex
-	latexmk -f -quiet -pdflatex -output-directory="./build"
+	latexmk -f -quiet -output-directory="./build"
 
 build/exercises.pdf: exercises.tex
-	latexmk -f -quiet -pdflatex -output-directory="./build"
+	latexmk -f -quiet -output-directory="./build"
 
 preview/main.tex:
 	latexmk -pvc main.tex

@@ -225,15 +225,19 @@ Exercises accompanying the notes from Charles Pinter's `A Book of Abstract Algeb
                 \end{align}
             \item Associativity:
                 \begin{align}
-                    &x * (y * z) = x * \max{\{y, z\}} = \max{\{x, \max{\{y, z\}} \}} \nonumber \\
-                    &(x * y) * z = \max{\{x, y\}} * z = \max{\{\max{\{x, y\}}, z \}}
+                    x * (y * z) = x * \max{\{y, z\}} = \max{\{x, \max{\{y, z\}} \}} \nonumber \\
+                    (x * y) * z = \max{\{x, y\}} * z = \max{\{\max{\{x, y\}}, z \}}
                 \end{align}
-                Regardless of the how three numbers are compose with $*$, they produce the same result; that is larger of three numbers. 0Thus $x * (y * z) = (x * y) * z$.
+                Regardless of how three numbers are compose with $*$, they produce the same result; that is larger of three numbers. 0Thus $x * (y * z) = (x * y) * z$.
             \item Existence of identity:
                 \begin{align}
-                    &x * e = \max{\{x, e\}} = x \implies e \leq x \quad\forall x \in \mathbb{R} \nonumber \\
+                    x * e = \max{\{x, e\}} = x \implies e \leq x
                 \end{align}
-                No such element in $\mathbb{R}$ unless you extend it to include $-\infty$ and $\infty$. By this no inverses.
+            \item Existence of inverses:
+                \begin{align}
+                    x * x' = \max{\{x, x'\}} = e \leq x
+                \end{align}
+                This is only possible if $x' = x$ since $\max{\{x, x'\}} \geq x,x'$
         \end{enumerate}
 \end{enumerate}
 
