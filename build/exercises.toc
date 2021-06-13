@@ -1,0 +1,3 @@
+\babel@toc {english}{}
+\contentsline {section}{Operations}{1}{section*.2}%
+\contentsfinish 

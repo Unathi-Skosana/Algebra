@@ -78,11 +78,9 @@
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
 
-\title{	
-	\normalfont\normalsize 
-	\huge Notes on Charles Pinter's book of abstract algebra % The assignment title
-}\author{Unathi Skosana} % Your name
-\date{\vspace{-5pt}\normalsize March 31, 2020} % Today's date or a custom date
+\title{Notes on Charles Pinter's book of abstract algebra} % The assignment title
+\author{Unathi Skosana}
+\date{\vspace{-5pt}\normalsize \today} % Today's date or a custom date
 
 \begin{document}
 \justifying 
@@ -115,7 +113,6 @@ These are notes taken while reading Charles Pinter's 'A Book Of Abstract Algebra
 \end{defns}
 
 \begin{defns}[Superfluous properties]
-
     \begin{itemize}
         \item An operation $*$ is said to be \emph{commutative} if it satisfies
             \begin{align}
@@ -138,28 +135,5 @@ These are notes taken while reading Charles Pinter's 'A Book Of Abstract Algebra
             \end{align}
     \end{itemize}
 \end{defns}
-
-\subsection{Exercises}
-\textbf{A}. For each rule, is it an operation, if not, why?
-\begin{enumerate}
-    \item $a * b  = \sqrt{\abs{a b}}$, on the set $\mathbb{Q}$ 
-        \newline
-        No. If $a = b = 1$, then $1 * 1 = \sqrt{2} \not\in \mathbb{Q}$
-    \item $a * b  = a\ln{b}$, on the set $\{ x \in \mathbb{R}: x > 0\} \}$.
-        \newline
-        No. It is not closed under $*$, e.g $0 < b < 1$, then $a * b  = a\ln{b} < 0$
-    \item $a * b$ is a root of the equation, $x^2 = a^2b^2$, on the set $\mathbb{R}$
-        \newline
-        No. The operation isn't uniquely defined. $x^2 = a^2b^2$ has to two roots, namely $+ab$ and $-ab$
-    \item Subtraction, on the set $\mathbb{Z}$. 
-        \newline
-        Yes. 
-    \item Subtraction, on the set $\{ n \in \mathbb{Z}: n \geq 0 \}$.
-        \newline
-        No. e.g. $b = a + 1$ then $a * b = -1$ which is not in the set.
-    \item $a * b = |a - b|$, on the set $\{ n \in \mathbb{Z}: n \geq 0\}$
-        \newline
-        Yes. (distance metric)
-\end{enumerate}
 
 \end{document}

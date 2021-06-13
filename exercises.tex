@@ -1,0 +1,224 @@
+\documentclass[nohyper,nobib]{tufte-handout}
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{graphics/}} % set of paths to search for images
+\usepackage{amsmath,amsfonts,amsthm, amssymb, physics} % Math packages
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+\usepackage{lipsum}   % filler text
+\usepackage{fancyvrb} % extended verbatim environments
+\fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+\allowdisplaybreaks
+\usepackage{mathpazo}
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{verbatim}
+\usepackage{kantlipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\normalfont \bfseries} % Make all sections centered, the default font and small caps
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{xspace}
+\usepackage{float}
+\usepackage[colorlinks=true, linkcolor=WildStrawberry, urlcolor=WildStrawberry, citecolor=Emerald, linktocpage=true, breaklinks=true]{hyperref}
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{facts}[thm]{Facts}
+\newtheorem{fact}[thm]{Fact}
+\newtheorem{clm}[thm]{Claim}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem{exer}[thm]{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+
+\geometry{
+	left=13mm, % left margin
+	textwidth=130mm, % main text block
+	marginparsep=8mm, % gutter between main text block and margin notes
+	marginparwidth=55mm % width of margin notes
+}
+
+\fontsize{10}{20}\selectfont
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{Exercises from  Charles Pinter's `A Book of Abstract Algebra`} % The assignment title
+\author{Unathi Skosana}
+\date{\vspace{-5pt}\normalsize \today} % Today's date or a custom date
+
+\begin{document}
+\justifying 
+\maketitle
+
+\begin{abstract}
+\noindent
+Exercises accompanying the notes from Charles Pinter's `A Book of Abstract Algebra`
+\end{abstract}
+
+\tableofcontents
+
+\section{Operations}
+
+\begin{exer}
+    For each rule, is it an operation, if not, why?
+\end{exer}
+
+\begin{enumerate}
+    \item $a * b  = \sqrt{\abs{a b}}$, on the set $\mathbb{Q}$ 
+        \newline
+        No. If $a = b = 1$, then $1 * 1 = \sqrt{2} \not\in \mathbb{Q}$
+    \item $a * b  = a\ln{b}$, on the set $\{ x \in \mathbb{R}: x > 0\} \}$.
+        \newline
+        No. It is not closed under $*$, e.g $0 < b < 1$, then $a * b  = a\ln{b} < 0$
+    \item $a * b$ is a root of the equation, $x^2 = a^2b^2$, on the set $\mathbb{R}$
+        \newline
+        No. The operation isn't uniquely defined. $x^2 = a^2b^2$ has to two roots, namely $+ab$ and $-ab$
+    \item Subtraction, on the set $\mathbb{Z}$. 
+        \newline
+        Yes. 
+    \item Subtraction, on the set $\{ n \in \mathbb{Z}: n \geq 0 \}$.
+        \newline
+        No. e.g. $b = a + 1$ then $a * b = -1$ which is not in the set.
+    \item $a * b = |a - b|$, on the set $\{ n \in \mathbb{Z}: n \geq 0\}$
+        \newline
+        Yes. (distance metric)
+\end{enumerate}
+
+\noindent
+\begin{exer}
+    Indicate whether or not :
+\end{exer}
+
+\begin{enumerate}[I]
+    \item it is commutative,
+    \item it is associative,
+    \item $\mathbb{R}$ has an identity element with respect to $*$
+    \item every $x \in \mathbb{R}$ has an inverse with respect to $*$
+\end{enumerate}
+
+\begin{enumerate}
+    \item $x * y = x + 2y + 4$
+        \begin{enumerate}[I]
+            \item Commutativity:
+                \begin{align}
+                    &y * x = y + 4x + 4 \neq x + 4y + 4 \quad\forall x,y \in \mathbb{R}
+                \end{align}
+                Not commutative
+            \item Associativity:
+                \begin{align}
+                    &x * (y * z) = x * (y + 2z +4)  = x + 2(y + 2z + 4) + 4 \nonumber \\
+                    &(x * y) * z = (x + 2y + 4) * z = x + 2y + 4 + 2z + 4 \nonumber \\
+                    &x * (y * z) \neq (x * y) * z
+                \end{align}
+                Not associative
+            \item Existence of identity:
+                \begin{align}
+                    &x * e = x + 2e + 4 = x \nonumber \\
+                    &2e = 4 \implies e = -2
+                \end{align}
+                Check
+                \begin{align}
+                    &x * 2 = x + -2*2 + 4 = x \nonumber \\ 
+                    &2 * x = -2 + 2x + 4  = 2 * (x + 1)
+                \end{align}
+                No identity element, and thus no inverses.
+        \end{enumerate}
+    \item $x * y = x + 2y - xy$
+        \begin{enumerate}[I]
+            \item Commutativity:
+                \begin{align}
+                    & y * x = y + 2x - yx \neq x + 2y -xy \quad\forall x,y \in \mathbb{R}
+                \end{align}
+            \item Associativity:
+                \begin{align}
+                    &x * (y * z) = x * (y + 2z - yz) = x + 2(y + 2z - yz) - x(y + 2z - yz) \nonumber \\
+                    &= x + 2y + 4z -2yz - xy - 2xz + xyz \nonumber \\
+                    &(x * y) * z = (x + 2y - yx) * z = x + 2y - yx + 2z - (x + 2y -yx)z \nonumber \\
+                                &= x + 2y - yx + 2z - xz - 2yz + yxz \nonumber \\
+                                &x * (y * z) \neq (x * y) * z
+                \end{align}
+            \item Existence of identity:
+                \begin{align}
+                    x * e =  x + 2e - xe = x \nonumber \\
+                    2e - xe = e(2 - x) = 0 \implies e = 0
+                \end{align}
+                Check
+                \begin{align}
+                    x * 0 = x + 2*0 - x*0 =  x \\
+                    0 * x = 0 + 2x - 0*x  = 2x
+                \end{align}
+                No identity element, thus no inverses.
+        \end{enumerate}
+    \item $x * y = \abs{x + y}$
+        \begin{enumerate}[I]
+            \item Commutativity:
+                \begin{align}
+                    &y * x = \abs{y + x} = \abs{x + y} = x * y
+                \end{align}
+            \item Associativity:
+                \begin{align}
+                    &x * (y * z) = x * \abs{y + z} = \abs{x + \abs{y + z}} \nonumber \\
+                    &(x * y) * z = \abs{x + y} * z = \abs{\abs{x + y} + z} 
+                \end{align}
+                $x * (y * z) \neq (x * y) *z$, to see this set $x=1,y=-2,z=0$
+                \begin{align}
+                    &\abs{1 + \abs{-2}} \neq \abs{\abs{1 - 2}} \nonumber
+                \end{align}
+            \item Existence of identity:
+                \begin{align}
+                    &x * e = \abs{x + e} = x \implies e = 0
+                \end{align}
+                Check
+                \begin{align}
+                    &x * 0 = \abs{x + 0} = x \nonumber \\
+                    &0 * x = \abs{0 + x} = x
+                \end{align}
+            \item Existence of inverses:
+                \begin{align}
+                    &x * x' = \abs{x + x'} = 0 \implies x' = -x
+                \end{align}
+                Check
+                \begin{align}
+                    &x * (-x) = \abs{x + (-x)} = 0 \nonumber \\
+                    &(-x) * x = \abs{(-x) + x} = 0
+                \end{align}
+        \end{enumerate}
+\end{enumerate}
+
+\end{document}
