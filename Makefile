@@ -23,7 +23,7 @@ clean:
 	latexmk -c
 
 prepare:
-	mkdir -p build submission
+	mkdir -p build release 
 
 release:
-	cp build/*.pdf submission
+	cp build/*.pdf release 
