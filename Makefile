@@ -1,6 +1,6 @@
-.PHONY: all clean prepare main release preview
+.PHONY: all clean prepare main release preview/main.tex preview/exercises.tex
 
-all: prepare main release preview/main.tex
+all: prepare main release
 
 main: build/main.pdf 
 
