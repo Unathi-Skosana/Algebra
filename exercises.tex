@@ -231,7 +231,7 @@ Exercises accompanying the notes from Charles Pinter's `A Book of Abstract Algeb
             \item Associativity:
                 \begin{align}
                     &x * (y * z) = x * (yz + 1) = x(yz + 1) + 1 = xyz + x + 1 \nonumber \\
-                    &(x * y) * z = (xy + 1)*z = (xy + 1)z + 1 = xyz + z + 1 \nonumber \\
+                    &(x * y) * z = (xy + 1)*z = (xy + 1)z + 1 = xyz + z + 1 
                 \end{align}
                 $(x * y) * z \neq x * (y * z)$
             \item Existence of identity:
@@ -257,12 +257,32 @@ Exercises accompanying the notes from Charles Pinter's `A Book of Abstract Algeb
                     &x * (y * z) = x * \max{\{y, z\}} = \max{\{x, \max{\{y, z\}} \}} \nonumber \\
                     &(x * y) * z = \max{\{x, y\}} * z = \max{\{\max{\{x, y\}}, z \}}
                 \end{align}
-                Regardless of the how three numbers are compose with $*$, they produce the same result; that is larger of three numbers. 0Thus $x * (y * z) = (x * y) * z$.
+                Regardless of the how three numbers are compose with $*$, they produce the same result; that is larger of three numbers. Thus $x * (y * z) = (x * y) * z$.
             \item Existence of identity:
                 \begin{align}
-                    &x * e = \max{\{x, e\}} = x \implies e \leq x \quad\forall x \in \mathbb{R} \nonumber \\
+                    &x * e = \max{\{x, e\}} = x \implies e \leq x \quad\forall x \in \mathbb{R}
                 \end{align}
                 No such element in $\mathbb{R}$ unless you extend it to include $-\infty$ and $\infty$. By this no inverses.
+        \end{enumerate}
+    \item $x * y = \frac{xy}{x + y + 1}$
+        \begin{enumerate}[i]
+            \item Commutativity:
+                \begin{align}
+                    y * x = \frac{yx}{y + x + 1} = \frac{xy}{x + y + 1} = x * y
+                \end{align}
+            \item Associativity:
+                \begin{align}
+                    &x * (y * z) = x * \frac{yz}{y + z + 1} =\frac{\frac{xyz}{y + z + 1}}{x + \frac{yz}{y + z + 1} + 1} = \frac{xyz}{xy + xz + x + yz + y + z + 1} \nonumber \\
+                    &(x * y) * z = \frac{xy}{x + y + 1} * z = \frac{\frac{xyz}{x + y + 1}}{\frac{xy}{x + y + 1} + z + 1} = \frac{xyz}{xy + xz + yz + z + x + y +1 }
+                \end{align}
+                $(x * y) * z = x * (y * z)$
+            \item Existence of Identity:
+                \begin{align}
+                    &x * e = \frac{xe}{x + e + 1}  = x \nonumber \\
+                    & x^2 + xe + x = xe \nonumber  \\
+                    & x(x + 1) =0
+                \end{align}
+            Only holds for $x=0, x=-1$, thus no solution on the set of positive real numbers. Thus no inverses as well.
         \end{enumerate}
 \end{enumerate}
 
