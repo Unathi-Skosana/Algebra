@@ -287,15 +287,14 @@ Exercises accompanying the notes from Charles Pinter's `A Book of Abstract Algeb
 \end{enumerate}
 
 \begin{exer}
-    Let $A$ be the two-element set $A = \{a, b\}$ 
+    Let $A$ be the two-element set $A = \{a, b\}$
 \end{exer}
 
 \begin{enumerate}
-    \item Write the tables of all operations on $A$ and label these operations. There are four possible ordered pairs and for each ordered, we either assign it to $a$ or $b$; thus there are $2 \times 2 \times 2 \times 2 = 16$ operations possible.
-
-        \begin{table}[h]
+    \item Write the tables of all $16$ operations on $A$. 
+        \begin{table}
             \begin{tabular}{@{}c|c@{}}
-                $(x, y)_{0_{1}}$ & $x * y$ \\
+                $(x, y)$ & $x * y$ \\
                 \midrule
                 $(a, a)$ & $a$ \\
                 $(a, b)$ & $a$ \\
@@ -304,7 +303,7 @@ Exercises accompanying the notes from Charles Pinter's `A Book of Abstract Algeb
             \end{tabular}
             \qquad 
             \begin{tabular}{@{}c|c@{}}
-                $(x, y)_{0_{2}}$ & $x * y$ \\
+                $(x, y)$ & $x * y$ \\
                 \midrule
                 $(a, a)$ & $a$ \\
                 $(a, b)$ & $a$ \\
@@ -313,7 +312,7 @@ Exercises accompanying the notes from Charles Pinter's `A Book of Abstract Algeb
             \end{tabular}
             \qquad
             \begin{tabular}{@{}c|c@{}}
-                $(x, y)_{0_{3}}$ & $x * y$ \\
+                $(x, y)$ & $x * y$ \\
                 \midrule
                 $(a, a)$ & $a$ \\
                 $(a, b)$ & $a$ \\
@@ -322,17 +321,17 @@ Exercises accompanying the notes from Charles Pinter's `A Book of Abstract Algeb
             \end{tabular}
             \qquad
             \begin{tabular}{@{}c|c@{}}
-                $(x, y)_{0_{4}}$ & $x * y$ \\
+                $(x, y)$ & $x * y$ \\
                 \midrule
                 $(a, a)$ & $a$ \\
                 $(a, b)$ & $b$ \\
                 $(b, a)$ & $a$ \\
                 $(b, b)$ & $a$
             \end{tabular}
-        \end{table}%
-        \begin{table}[h]
+        \end{table}
+        \begin{table}
             \begin{tabular}{@{}c|c@{}}
-                $(x, y)_{0_{5}}$ & $x * y$ \\
+                $(x, y)$ & $x * y$ \\
                 \midrule
                 $(a, a)$ & $b$ \\
                 $(a, b)$ & $a$ \\
@@ -341,7 +340,7 @@ Exercises accompanying the notes from Charles Pinter's `A Book of Abstract Algeb
             \end{tabular}
             \qquad
             \begin{tabular}{@{}c|c@{}}
-                $(x, y)_{0_{6}}$ & $x * y$ \\
+                $(x, y)$ & $x * y$ \\
                 \midrule
                 $(a, a)$ & $b$ \\
                 $(a, b)$ & $b$ \\
@@ -350,7 +349,7 @@ Exercises accompanying the notes from Charles Pinter's `A Book of Abstract Algeb
             \end{tabular}
             \qquad
             \begin{tabular}{@{}c|c@{}}
-                $(x, y)_{0_{7}}$ & $x * y$ \\
+                $(x, y)$ & $x * y$ \\
                 \midrule
                 $(a, a)$ & $b$ \\
                 $(a, b)$ & $a$ \\
@@ -359,7 +358,7 @@ Exercises accompanying the notes from Charles Pinter's `A Book of Abstract Algeb
             \end{tabular}
             \qquad
             \begin{tabular}{@{}c|c@{}}
-                $(x, y)_{0_{8}}$ & $x * y$ \\
+                $(x, y)$ & $x * y$ \\
                 \midrule
                 $(a, a)$ & $b$ \\
                 $(a, b)$ & $a$ \\
@@ -367,10 +366,9 @@ Exercises accompanying the notes from Charles Pinter's `A Book of Abstract Algeb
                 $(b, b)$ & $b$
             \end{tabular}
         \end{table}
-        \clearpage
-        \begin{table}[ht!]
+        \begin{table}
             \begin{tabular}{@{}c|c@{}}
-                $(x, y)_{0_{9}}$ & $x * y$ \\
+                $(x, y)$ & $x * y$ \\
                 \midrule
                 $(a, a)$ & $a$ \\
                 $(a, b)$ & $b$ \\
@@ -379,7 +377,7 @@ Exercises accompanying the notes from Charles Pinter's `A Book of Abstract Algeb
             \end{tabular}
             \qquad
             \begin{tabular}{@{}c|c@{}}
-                $(x, y)_{0_{10}}$ & $x * y$ \\
+                $(x, y)$ & $x * y$ \\
                 \midrule
                 $(a, a)$ & $a$ \\
                 $(a, b)$ & $a$ \\
@@ -388,7 +386,7 @@ Exercises accompanying the notes from Charles Pinter's `A Book of Abstract Algeb
             \end{tabular}
             \qquad
             \begin{tabular}{@{}c|c@{}}
-                $(x, y)_{0_{11}}$ & $x * y$ \\
+                $(x, y)$ & $x * y$ \\
                 \midrule
                 $(a, a)$ & $a$ \\
                 $(a, b)$ & $b$ \\
@@ -397,7 +395,7 @@ Exercises accompanying the notes from Charles Pinter's `A Book of Abstract Algeb
             \end{tabular}
             \qquad
             \begin{tabular}{@{}c|c@{}}
-                $(x, y)_{0_{12}}$ & $x * y$ \\
+                $(x, y)$ & $x * y$ \\
                 \midrule
                 $(a, a)$ & $b$ \\
                 $(a, b)$ & $b$ \\
@@ -405,18 +403,17 @@ Exercises accompanying the notes from Charles Pinter's `A Book of Abstract Algeb
                 $(b, b)$ & $a$
             \end{tabular}
         \end{table}
-        \begin{table}[ht!]
+        \begin{table}[t!]
             \begin{tabular}{@{}c|c@{}}
-                $(x, y)_{0_{13}}$ & $x * y$ \\
+                $(x, y)$ & $x * y$ \\
                 \midrule
                 $(a, a)$ & $b$ \\
                 $(a, b)$ & $b$ \\
                 $(b, a)$ & $a$ \\
                 $(b, b)$ & $b$
             \end{tabular}
-            \qquad
             \begin{tabular}{@{}c|c@{}}
-                $(x, y)_{0_{14}}$ & $x * y$ \\
+                $(x, y)$ & $x * y$ \\
                 \midrule
                 $(a, a)$ & $b$ \\
                 $(a, b)$ & $a$ \\
@@ -425,7 +422,7 @@ Exercises accompanying the notes from Charles Pinter's `A Book of Abstract Algeb
             \end{tabular}
             \qquad
             \begin{tabular}{@{}c|c@{}}
-                $(x, y)_{0_{15}}$ & $x * y$ \\
+                $(x, y)$ & $x * y$ \\
                 \midrule
                 $(a, a)$ & $a$ \\
                 $(a, b)$ & $b$ \\
@@ -434,7 +431,7 @@ Exercises accompanying the notes from Charles Pinter's `A Book of Abstract Algeb
             \end{tabular}
             \qquad
             \begin{tabular}{@{}c|c@{}}
-                $(x, y)_{0_{16}}$ & $x * y$ \\
+                $(x, y)$ & $x * y$ \\
                 \midrule
                 $(a, a)$ & $b$ \\
                 $(a, b)$ & $b$ \\
@@ -442,62 +439,8 @@ Exercises accompanying the notes from Charles Pinter's `A Book of Abstract Algeb
                 $(b, b)$ & $b$
             \end{tabular}
         \end{table}
-    \item Which of the operations are commutative?
-
-        $0_{1}, 0_{2}, 0_{5}, 0_{8}, 0_{11}, 0_{12}, 0_{15}, 0_{16}$
-
-    \item Which of the operations are associative?
-
-        $0_{1}, 0_{3}, 0_{9}, 0_{10}, 0_{11}, 0_{12}, 0_{15}, 0_{16}$
-
-    \item Which of the operations has an identity element?
-
-        $0_{2}, 0_{8}, 0_{11}, 0_{15}$
-
-    \item Which of the operations does every element have an inverse?
-
-        $0_{8}, 0_{11}$
 \end{enumerate}
 
-\begin{exer}
-    Let $A^{*}$ be the set of all sequences of symbols in the alphabet $A$. Define an operation on $A^{*}$ called concatenation: If $\mathbf{a}$ and $\mathbf{b}$ are in $A^{*}$, say $\mathbf{a} = a_1a_2\ldots a_n$ and $\mathbf{b} = b_1b_2\ldots b_m$. \emph{e.g.}, in the alphabet $A=\{0, 1\}$, if $\mathbf{a} = 1001$ and $\mathbf{b} = 010$, then $\mathbf{ab} = 1001010$. Let the symbol $\lambda$ denote the empty sequence
-\end{exer}
 
-\begin{enumerate}
-    \item Show that the operation is associative
-
-        Let $\mathbf{a} = a_1a_2 \ldots a_n$,  $\mathbf{b} = b_1b_2 \ldots b_m$, and $\mathbf{c} = c_1c_2 \ldots c_k$
-
-        \begin{align}
-            &\mathbf{a}(\mathbf{bc})= a_1a_2\ldots a_n (b_1b_2\ldots b_m c_1c_2\ldots c_k) = a_1a_2\ldots a_nb_1b_2\ldots b_m c_1c_2\ldots c_k \nonumber \\
-            &(\mathbf{ab})\mathbf{c} = (a_1a_2\ldots a_n b_1b_2\ldots b_m) c_1c_2\ldots c_k = a_1a_2\ldots a_n b_1b_2\ldots b_m c_1c_2\ldots c_k
-        \end{align}
-    \item Explain why the operation is not commutative?
-
-        For this operation to be commutative, we demand that every input sequence $\mathbf{a}, \mathbf{b}$ in the alphabet $A$,
-
-        \begin{align}
-            a_1a_2\ldots a_nb_1b_2\ldots b_m = b_1b_2\ldots b_ma_1a_2\ldots a_n
-        \end{align}
-
-        Consider the case $n > m$, this would mean
-
-        \begin{align}
-            a_i &= b_i  \quad i=0 \ldots m \nonumber \\
-            a_i &= a_i  \quad j=m+1 \ldots n
-        \end{align}
-
-        certainly this can't be true for all $\mathbf{a}, \mathbf{b}$ in the alphabet $A$. \emph{e.g.} $\mathbf{a} = 11, \mathbf{b} = 0$
-
-    \item  Prove that there is an identity element for this operation
-
-        \begin{align}
-            \mathbf{a}(\lambda) = a_1a_2\ldots a_n()  = \mathbf{a} \nonumber \\
-            \lambda\mathbf{a} = ()a_1a_2 \ldots a_n = \mathbf{a}
-        \end{align}
-
-        Thus the empty sequence is the identity element.
-
-\end{enumerate}
 
 \end{document}
