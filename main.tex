@@ -60,7 +60,7 @@
 
 \begin{abstract}
 \noindent
-These are notes taken while reading Charles Pinter's 'A Book Of Abstract Algebra`
+Personal notes taken while studying Charles Pinter's `A Book Of Abstract Algebra'
 \end{abstract}
 
 \tableofcontents
@@ -79,7 +79,7 @@ These are notes taken while reading Charles Pinter's 'A Book Of Abstract Algebra
 	Let $A$ be any set:\newline An operation $*$ on $A$ is a rule which assigns to each ordered pairs $(a,b)$ of elements of $A$ exactly one $a * b$ in $A$, such that:
     \begin{itemize}
         \item $a * b$ is defined for \emph{every} ordered pair $(a,b)$ of elements of $A$. \footnote{In $\mathbb{R}$, division does not qualify as operation since it does not satisfy this condition. i.e. the ordered pair $(a, 0)$ has undefined quotient $a / 0$.}
-        \item $a * b$ must be \emph{uniquely} defined. \footnote{If $\diamond$ is defined on $(a, b)$ to be the number whose square is $ab$. In $\mathbb{R}$, $\diamond$ does not qualify as an operation since $2 \diamond 2$  could be either $2$, or $+2$}
+        \item $a * b$ must be \emph{uniquely} defined. \footnote{If $\diamond$ is defined on $(a, b)$ to be the number whose square is $ab$. In $\mathbb{R}$, $\diamond$ does not qualify as an operation since $2 \diamond 2$  could be either $2$, or $+2$.}
         \item If $a, b \in A$, then $a * b \in A$. \footnote{$A$ is closed under the operation $*$}
     \end{itemize}
 \end{defns}
@@ -114,7 +114,56 @@ These are notes taken while reading Charles Pinter's 'A Book Of Abstract Algebra
         \begin{align}
             a * a^{-1} = e  \quad\text{ and }\quad a^{-1} * a = e
         \end{align}
-        is true for all element $a$ in $A$.
 \end{defns}
+
+\section{The Definitions of Groups}
+
+\begin{quest}
+    What is a \textbf{group}?
+\end{quest}
+
+\begin{defns}[Informal definition]
+    A group is defined to be a set with an operation ($*$) which is associative, has an identity element, and each element in the set has an inverse.
+\end{defns}
+
+\begin{defns}[Formal definition]
+    A group is a set $G$, together with an operation $*$ which satisfies:
+
+    \begin{itemize}
+        \item $*$ is associative.
+        \item There exists an element $e$ in $G$ such that $a*e = a$ and $e*a=a$ for every element $a$ in $G$.
+        \item For every element in $a$ in $G$, there is an element $a^{-1}$ in $G$ such that $a * a^{-1} = e$ and $a^{-1} * a = e$.
+    \end{itemize}
+\end{defns}
+
+\noindent
+A group as defined above is usually denoted by the pair symbol $(G,*)$, which denotes that a group is a set $G$ together with the operation $*$. \footnote{If there is no chance of ambiguity, the group is usually denoted with just the letter $G$.}
+
+\marginnote{
+    \begin{rem}
+        The set of integers $\mathbb{Z} = \{\ldots,-2, -1, 0 , 1, 2, \ldots\}$ is a group with the operation of addition, denoted by $(\mathbb{Z}, +)$. Similarly,the set of rationals numbers and addition $(\mathbb{Q}, +)$, and the set of real numbers $(\mathbb{R}, +)$.
+    \end{rem}
+}
+
+\marginnote{
+    \begin{rem}
+        Many a times, algebraic structures apparent in the study of natural phenomena (that is to say in physics) are groups,\emph{i.e.} quantum spin, angular momentum
+    \end{rem}
+}
+
+\begin{exmp}[Finite groups: Groups of integers modulo $n$]
+    The group of integers modulo $n>1$ consists of the set
+    \begin{align}
+        \{0, 1, 2, \ldots, n - 1\}
+    \end{align}
+    together with th operation of addition modulo $n$
+\end{exmp}
+
+\begin{marginfigure}
+    \def\svgwidth{\linewidth}
+    \resizebox{0.8\textwidth}{!}{\input{graphics/modulo_n_circle.pdf_tex}}
+    \caption{}
+\end{marginfigure}
+
 
 \end{document}
