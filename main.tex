@@ -76,7 +76,7 @@ These are notes taken while reading Charles Pinter's 'A Book Of Abstract Algebra
 \end{defns}
 
 \begin{defns}[Formal definition]
-	Let $A$ be any set:\newline An operation $*$ on A is a rule which assigns to each ordered pairs $(a,b)$ of elements of A exactly one $a * b$ in A
+	Let $A$ be any set:\newline An operation $*$ on $A$ is a rule which assigns to each ordered pairs $(a,b)$ of elements of $A$ exactly one $a * b$ in $A$, such that:
     \begin{itemize}
         \item $a * b$ is defined for \emph{every} ordered pair $(a,b)$ of elements of $A$. \footnote{In $\mathbb{R}$, division does not qualify as operation since it does not satisfy this condition. i.e. the ordered pair $(a, 0)$ has undefined quotient $a / 0$.}
         \item $a * b$ must be \emph{uniquely} defined. \footnote{If $\diamond$ is defined on $(a, b)$ to be the number whose square is $ab$. In $\mathbb{R}$, $\diamond$ does not qualify as an operation since $2 \diamond 2$  could be either $2$, or $+2$}
@@ -84,28 +84,37 @@ These are notes taken while reading Charles Pinter's 'A Book Of Abstract Algebra
     \end{itemize}
 \end{defns}
 
-\begin{defns}[Superfluous properties]
-    \begin{itemize}
-        \item An operation $*$ is said to be \emph{commutative} if it satisfies
-            \begin{align}
-                a * b  = b * a
-            \end{align}
-            for any two elements $a$ and $b$ in $A$.
-        \item An operation $*$ is said to be \emph{associative} if it satisfies 
-            \begin{align}
-                (a * b) * c = a * (b * c)
-            \end{align}
-            for any three elements $a$, $b$ and $c$ in $A$.
-        \item The \emph{identity} element $e$ with respect to the operation $*$ has the property that:
-            \begin{align}
-                e * a  = a \quad\text{ and }\quad a * e = a
-            \end{align}
-            for every element in $a$ in $A$.
-        \item The inverse of any element $a$, denoted by $a^{-1}$ has the property that;
-            \begin{align}
-                a * a^{-1} = e  \quad\text{ and }\quad a^{-1} * a = e
-            \end{align}
-    \end{itemize}
+    
+\begin{defns}[Commutativity]
+    An operation $*$ is said to be \emph{commutative} if it satisfies
+    \begin{align}
+        a * b  = b * a
+    \end{align}
+    for any two elements $a$ and $b$ in $A$.
+\end{defns}
+
+\begin{defns}[Associativity]
+    An operation $*$ is said to be \emph{associative} if it satisfies 
+        \begin{align}
+            (a * b) * c = a * (b * c)
+        \end{align}
+        for any three elements $a$, $b$ and $c$ in $A$.
+\end{defns}
+
+\begin{defns}[Identity element]
+    The \emph{identity} element $e$ with respect to the operation $*$ has the property that:
+        \begin{align}
+            e * a  = a \quad\text{ and }\quad a * e = a
+        \end{align}
+        is true for every element $a$ in $A$.
+\end{defns}
+
+\begin{defns}[Inverses]
+    The inverse of any element $a$, item denoted by $a^{-1}$ has the property that:
+        \begin{align}
+            a * a^{-1} = e  \quad\text{ and }\quad a^{-1} * a = e
+        \end{align}
+        is true for all element $a$ in $A$.
 \end{defns}
 
 \end{document}
