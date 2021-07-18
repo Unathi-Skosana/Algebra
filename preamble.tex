@@ -50,3 +50,60 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage[colorlinks=true, linkcolor=WildStrawberry, urlcolor=WildStrawberry, citecolor=Emerald, linktocpage=true, breaklinks=true]{hyperref}
 
+\usepackage{varioref}
+\usepackage{xspace}
+
+%%
+% Figures
+\newcommand{\labelFigure}[1]{%
+  % #1 = label
+  \label{fig:#1}%
+}
+\newcommand{\refFigure}[1]{%
+  % #1 = reference
+  \figurename~\vref{fig:#1}\xspace%
+}
+
+\newcommand{\refFigureOnly}[1]{%
+  % #1 = reference
+  \figurename~\ref{fig:#1}\xspace%
+}
+
+\newcommand{\refSubfigureOnly}[1]{%
+  % #1 = reference
+  \subcaptionref{fig:#1}\xspace%
+}
+
+%%
+% Tables
+\newcommand{\labelTable}[1]{%
+  % #1 = label
+  \label{tab:#1}%
+}
+\newcommand{\refTable}[1]{%
+  % #1 = reference
+  \tablename~\vref{tab:#1}\xspace%
+}
+\newcommand{\refTableOnly}[1]{%
+  % #1 = reference
+  \tablename~\ref{tab:#1}\xspace%
+}
+\newcommand{\refSubtableOnly}[1]{%
+  % #1 = reference
+  \subcaptionref{tab:#1}\xspace%
+}
+
+%%
+% Sections
+\newcommand{\labelSection}[1]{%
+  % #1 = label
+  \label{sec:#1}%
+}
+\newcommand{\refSection}[1]{%
+  % #1 = reference
+  §~\vref{sec:#1}\xspace%
+}
+\newcommand{\refSectionOnly}[1]{% Doesn't include the page referencing
+  % #1 = reference
+  §~\ref{sec:#1}\xspace%
+}

@@ -147,7 +147,7 @@ A group as defined above is usually denoted by the pair symbol $(G,*)$, which de
 
 \marginnote{
     \begin{rem}
-        Many a times, algebraic structures apparent in the study of natural phenomena (that is to say in physics) are groups,\emph{i.e.} quantum spin, angular momentum
+        Many a times, algebraic structures apparent in the study of natural phenomena (that is to say in physics) are groups,~\emph{i.e.} quantum spin, angular momentum
     \end{rem}
 }
 
@@ -156,14 +156,47 @@ A group as defined above is usually denoted by the pair symbol $(G,*)$, which de
     \begin{align}
         \{0, 1, 2, \ldots, n - 1\}
     \end{align}
-    together with th operation of addition modulo $n$
-\end{exmp}
+
+    \noindent
+together with the operation of addition modulo $n$; The addition of two numbers $a$ and $b$ modulo $n$, can be described by imaging a set of equidistant points on an arc of a unit circle. To add $a$ and $b$, we start at $a$ and hop $b$ points on the arc each at an angle of $2\pi/n$ from the next, where we end up will be the sum $a + b$, see \refFigureOnly{modulo_n_circle}. This operation is associative (instead of starting at $a$, we can start at $b$ and hop $a$ times, we'll end up at $a + b$ again). The identity element for this group is $0$, and the $n - a$ is the inverse of $a$ ($a + n - a = n = 0$). \footnote{The element $-a$  would seem to quality as inverse of $a$, $a + (-a) = 0$. However $-a$ does not belong to the group.} Such a group is denoted by the symbol $\mathbb{Z}_{n}$.
+
+\emph{Cayley} table shows the operation of a finite group, by arranging all possible group operations of all the elements in the group in a square table, and from the Cayley table, many properties of the group can be easily discerned. Consider the Cayley table for the group $\mathbb{Z}_3$ below:
+
+\[
+    \begin{array}{l|*{3}{l}}
+       +   & 0   & 1   & 2 \\
+    \hline
+       0   &  0  &  1  & 2\\
+       1   &  1  &  2  & 0 \\
+       2   &  2  &  0  & 1 \\
+    \end{array} 
+\]
+
+\noindent
+a quick glance at the table, we can see that $\mathbb{Z}_3$ is a commutative or Abelian group and $1$ and $2$ are inverses of one another. Any finite group $(G, *)$ has a Cayley table of the form
+
+\[
+    \begin{array}{l|*{4}{c}}
+        *   & \cdots   &  y  & \cdots \\
+    \hline
+       \vdots   &     &   &     \\
+       x        &     & x*y   &     \\
+       \vdots   &     &   & \\
+    \end{array} 
+\]
+
+\noindent
+each element in $G$ has one designated row and similarly a column, then the entry in the row of $x$ and the column of $y$ is $x * y$.
+
 
 \begin{marginfigure}
+    \centering
     \def\svgwidth{\linewidth}
-    \resizebox{0.8\textwidth}{!}{\input{graphics/modulo_n_circle.pdf_tex}}
-    \caption{}
+    \resizebox{0.6\textwidth}{!}{\input{graphics/modulo_n_circle.pdf_tex}}
+    \caption{Addition modulo $n$ can be visualized by hoping around equidistant points on an arc of a unit circle.}
+    \labelFigure{modulo_n_circle}
 \end{marginfigure}
 
+\end{exmp}
 
 \end{document}
