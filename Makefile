@@ -1,19 +1,19 @@
-.PHONY: all clean prepare main release preview/main.tex preview/exercises.tex
+.PHONY: all clean prepare main release preview/notes.tex preview/exercises.tex
 
 all: prepare main release
 
-main: build/main.pdf 
+main: build/notes.pdf 
 
-exercises: build/main.pdf
+exercises: build/notes.pdf
 
-build/main.pdf: main.tex
+build/notes.pdf: notes.tex
 	latexmk -f -quiet -output-directory="./build"
 
 build/exercises.pdf: exercises.tex
 	latexmk -f -quiet -output-directory="./build"
 
-preview/main.tex:
-	latexmk -pvc main.tex
+preview/notes.tex:
+	latexmk -pvc notes.tex
 
 preview/exercises.tex:
 	latexmk -pvc exercises.tex
@@ -23,7 +23,7 @@ clean:
 	latexmk -c
 
 prepare:
-	mkdir -p build release 
+	mkdir -p build print 
 
 release:
-	cp build/*.pdf release 
+	cp build/*.pdf print 
